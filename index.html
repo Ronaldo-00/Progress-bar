@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Progress bar</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="contain">
+        <div class="outer">
+            <div class="inner">
+                <div id="number"> </div>
+            </div>
+        </div>
+        <!---Circle obj gradientColor using svg tag-->
+        <svg >
+            <defs>
+                <linearGradient id="linearGradient">
+                    <stop offset="0" stop-color="#e91e63"></stop>
+                    <stop offset="100%" stop-color="#673ab7"></stop>
+                </linearGradient>
+            </defs>
+            <circle cx="90" cy="90" r="80" stroke-linecap="round"/>
+        </svg>
+    </div>
+<!---Number counting using javascript-->
+
+<script>
+    let number = document.getElementById("number");
+    let count = 0;
+    setInterval(()=>{
+        if(count==65){
+            clearInterval();
+        }
+        else{
+            count += 1;
+            number.innerHTML = count + "%";
+        }
+    },30);
+</script>    
+    
+</body>
+</html>

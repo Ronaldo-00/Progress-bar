@@ -1,0 +1,60 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    background: aliceblue;
+}
+.contain{
+    width: 180px;
+    height: 180px;
+    position: relative;
+}
+.outer{
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    padding: 20px;
+    box-shadow: 6px 6px 10px -1px rgba(0,0,0,0.15),
+                -6px -6px 10px -1px rgba(255,255,255,0.7);
+}
+.inner{
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+    box-shadow:inset 4px 4px 6px -1px rgba(0,0,0,0.2),
+               inset -4px -4px 6px -1px rgba(255,255,255,0.7);
+}
+#number{
+    font-weight: 600;
+}
+circle{
+    fill: none;
+    stroke: url(#linearGradient);
+    stroke-width: 20px;
+    stroke-dasharray: 472;
+    stroke-dashoffset: 472;
+    animation: anim 2s linear forwards;
+}
+/*--Animation effect for circle gradient--*/
+@keyframes anim{
+    100%{
+        stroke-dashoffset: 162;
+
+    }
+}
+svg{
+    width: 180px;
+    height: 180px;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
